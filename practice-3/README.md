@@ -186,6 +186,9 @@ int main() {
     for (int i = 0; i < 5; i++) {
         printf("%d ", arr[i]);
     }
+
+    <img width="981" height="512" alt="Снимок экрана 2026-03-28 142149" src="https://github.com/user-attachments/assets/3b7c087f-2a8c-4a96-855d-5a1cb018c5e0" />
+
     printf("\n");
 
     return 0;
