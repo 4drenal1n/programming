@@ -46,7 +46,7 @@ typedef struct {
     int count;
 } Context;
 
-// ========== Конструкторы ==========
+//Конструкторы 
 
 Expr* expr_number(double value) {
     Expr *e = (Expr*)malloc(sizeof(Expr));
@@ -137,7 +137,7 @@ Expr* expr_pow(Expr *base, Expr *exp) {
     return e;
 }
 
-// ========== Контекст ==========
+// Контекст 
 
 void context_init(Context *ctx);
 void context_set(Context *ctx, char name, double value);
@@ -175,7 +175,7 @@ double context_get(const Context *ctx, char name) {
     return 0.0;  // Переменная не найдена
 }
 
-// ========== Вычисление выражения ==========
+//  Вычисление выражения 
 
 double expr_eval(const Expr *e, const Context *ctx) {
     if (!e || !ctx) return 0.0;
@@ -216,7 +216,7 @@ double expr_eval(const Expr *e, const Context *ctx) {
     }
 }
 
-// ========== Вывод выражения ==========
+// Вывод выражения 
 
 static void expr_print_recursive(const Expr *e, int precedence) {
     if (!e) return;
@@ -299,7 +299,7 @@ void expr_print(const Expr *e) {
     if (e) expr_print_recursive(e, 0);
 }
 
-// ========== Дифференцирование ==========
+// Дифференцирование 
 
 Expr* expr_derivative(const Expr *e, char var) {
     if (!e) return NULL;
@@ -383,7 +383,7 @@ Expr* expr_derivative(const Expr *e, char var) {
             } else {
                 // Общий случай: d(f^g)/dx = f^g * (g' * ln(f) + g * f'/f)
                 Expr *pow_val = expr_pow(base, exp);
-                Expr *ln_f = expr_number(log(2.718281828));  // упрощённо
+                Expr *ln_f = expr_number(log(2.718281828));  
                 Expr *term1 = expr_mul(de, ln_f);
                 Expr *term2 = expr_mul(exp, expr_div(db, base));
                 return expr_mul(pow_val, expr_add(term1, term2));
@@ -395,12 +395,12 @@ Expr* expr_derivative(const Expr *e, char var) {
     }
 }
 
-// ========== Упрощение выражения ==========
+//  Упрощение выражения 
 
 Expr* expr_simplify(Expr *e) {
     if (!e) return NULL;
 
-    // Сначала упрощаем поддеревья (switch по тегу)
+    // Сначала упрощаем (switch по тегу)
     switch (e->type) {
         case EXPR_ADD:
         case EXPR_SUB:
@@ -641,15 +641,14 @@ Expr* expr_simplify(Expr *e) {
     return e;
 }
 
-// ========== Освобождение памяти ==========
-
+//  Освобождение памяти 
 void expr_free(Expr *e) {
     if (!e) return;
     
     switch (e->type) {
         case EXPR_NUMBER:
         case EXPR_VARIABLE:
-            // Нет дочерних элементов
+            
             break;
         case EXPR_ADD:
         case EXPR_SUB:
@@ -668,7 +667,7 @@ void expr_free(Expr *e) {
     free(e);
 }
 
-// ========== Демонстрация ==========
+// Демонстрация 
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);
