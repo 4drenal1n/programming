@@ -13,19 +13,19 @@ x = 0.20, sin(x) = 0.1987
 
 ### Код программы
 
-#include <stdio.h>
-#include <math.h>
-
-int main(void) {
-    double pi = 3.14159;
-    double end = 2 * pi;
+    #include <stdio.h>
+    #include <math.h>
+    
+    int main(void) {
+        double pi = 3.14159;
+        double end = 2 * pi;
 
     for (double x = 0; x <= end + 0.0001; x += 0.1) {
         printf("x = %.2lf, sin(x) = %.4lf\n", x, sin(x));
     }
 
     return 0;
-}
+    }
 
 <img width="973" height="507" alt="Снимок экрана 2026-03-28 140018" src="https://github.com/user-attachments/assets/3fddefd5-476c-4553-83e2-46ca4850aac6" />
 
@@ -35,11 +35,11 @@ int main(void) {
 
 ### Код программы
 
-#include <stdio.h>
-
-int main() {
-    int n;
-    double sum = 0.0;
+    #include <stdio.h>
+    
+    int main() {
+        int n;
+        double sum = 0.0;
 
     printf("Enter n: ");
     scanf("%d", &n);
@@ -60,7 +60,7 @@ int main() {
     printf(" = %.4f\n", sum);
 
     return 0;
-}
+    }
 
 <img width="977" height="507" alt="Снимок экрана 2026-03-28 140434" src="https://github.com/user-attachments/assets/c0a52919-479d-4abf-894b-0cfb83e5b926" />
 
@@ -72,10 +72,10 @@ int main() {
 
 ### Код программы
 
-#include <stdio.h>
-
-int main() {
-    int n;
+    #include <stdio.h>
+    
+    int main() {
+        int n;
 
     printf("Enter N: ");
     scanf("%d", &n);
@@ -96,7 +96,7 @@ int main() {
     printf("\n");
 
     return 0;
-}
+    }
 
 <img width="982" height="507" alt="Снимок экрана 2026-03-28 140956" src="https://github.com/user-attachments/assets/adff2a75-e825-43d6-b726-8710c8c16b9f" />
 
@@ -109,11 +109,11 @@ int main() {
 
 ### Код программы
 
-#include <stdio.h>
-
-int main() {
-    double numbers[5];
-    double sum = 0.0;
+    #include <stdio.h>
+    
+    int main() {
+        double numbers[5];
+        double sum = 0.0;
 
     printf("Enter 5 numbers: ");
     for (int i = 0; i < 5; i++) {
@@ -125,7 +125,7 @@ int main() {
     printf("Average: %.2lf\n", average);
 
     return 0;
-}
+    }
 
 <img width="984" height="517" alt="Снимок экрана 2026-03-28 141411" src="https://github.com/user-attachments/assets/28c5aa11-b738-4ed5-86fd-fc056c1a5617" />
 
@@ -136,10 +136,10 @@ int main() {
 
 ### Код программы
 
-#include <stdio.h>
-
-int main() {
-    int arr[10];
+    #include <stdio.h>
+    
+    int main() {
+        int arr[10];
 
     printf("Enter 10 numbers: ");
     for (int i = 0; i < 10; i++) {
@@ -162,7 +162,7 @@ int main() {
     printf("Maximum: %d\n", max);
 
     return 0;
-}
+    }
 
 <img width="984" height="513" alt="Снимок экрана 2026-03-28 141747" src="https://github.com/user-attachments/assets/e3e1a60a-5172-492b-8bc7-c0b223857e35" />
 
@@ -173,9 +173,9 @@ int main() {
 
 ### Код программы
 
-#include <stdio.h>
-
-int main() {
+    #include <stdio.h>
+    
+    int main() {
     int arr[5];
 
     printf("Enter 5 numbers: ");
@@ -205,7 +205,7 @@ int main() {
     printf("\n");
 
     return 0;
-}
+    }
 
 
 
