@@ -136,6 +136,7 @@
 
     return 0;
     }
+<img width="981" height="514" alt="Снимок экрана 2026-03-29 002627" src="https://github.com/user-attachments/assets/c0dc2540-9e0c-41ae-b86a-87d310994564" />
 
 Задание 5.3: Сортировка с компаратором
 Реализуйте универсальную функцию сортировки с callback-компаратором.
@@ -245,7 +246,8 @@
     }
 
     return 0;
-}
+    }
+<img width="980" height="513" alt="Снимок экрана 2026-03-29 003218" src="https://github.com/user-attachments/assets/a3a6e229-cb66-4a12-8d32-d6409f043b82" />
 
 Задание 5.4: Функциональные операции над массивами
 Реализуйте функции высшего порядка для работы с массивами.
@@ -339,6 +341,7 @@
 
     return 0;
     }
+<img width="977" height="508" alt="Снимок экрана 2026-03-29 004612" src="https://github.com/user-attachments/assets/f9938b11-498b-4566-b75c-de6b86092666" />
 
 Задание 5.5: Поиск в массиве
 Реализуйте различные алгоритмы поиска.
@@ -454,6 +457,7 @@
 
     return 0;
     }
+<img width="982" height="511" alt="Снимок экрана 2026-03-29 144407" src="https://github.com/user-attachments/assets/8e9b4891-9ade-4f41-85de-e6e23f4cca4e" />
 
 Задание 5.6: Работа с двумерными массивами
 Реализуйте функции для обработки изображений (матрица яркости пикселей).
@@ -618,6 +622,7 @@
 
     return 0;
     }
+<img width="981" height="708" alt="Снимок экрана 2026-03-29 144949" src="https://github.com/user-attachments/assets/73d1b483-b492-49ef-8faa-9bde1d77e1f2" />
 
 
 
