@@ -30,7 +30,7 @@ class ClickerGame:
         self.create_widgets()
     
     def create_widgets(self):
-        # Метка со счетом (монетки)
+        # монетки
         self.coins_label = tk.Label(
             self.root, 
             text=f"Монетки: {self.coins}", 
@@ -94,7 +94,7 @@ class ClickerGame:
         )
         self.potion_button.pack(pady=10)
         
-        # Метка стоимости зелья
+        # стоимости зелья
         self.potion_cost_label = tk.Label(
             self.root,
             text=f"Стоимость зелья: {self.potion_cost} монет",
@@ -102,13 +102,6 @@ class ClickerGame:
         )
         self.potion_cost_label.pack()
         
-        # Метка силы клика
-        self.power_label = tk.Label(
-            self.root,
-            text=f"Сила атаки: {self.click_power}",
-            font=("Arial", 12)
-        )
-        self.power_label.pack(pady=5)
         
         # Сообщение о последнем действии
         self.message_label = tk.Label(
@@ -129,8 +122,10 @@ class ClickerGame:
             self.spawn_new_monster()
             return
         
-        # Случайный урон монстру (от click_power до click_power * 2)
-        damage_to_monster = random.randint(self.click_power, self.click_power * 2)
+         # Урон по монстру: от 1 до 5 + 2 за уровень монстра
+        base_damage = random.randint(1, 5)
+        level_bonus = 2 * self.monster_level
+        damage_to_monster = base_damage + level_bonus
         self.monster_health -= damage_to_monster
         
         # Случайные монетки (от 1 до 5 + уровень монстра)
@@ -202,7 +197,6 @@ class ClickerGame:
         self.monster_health_label.config(text=f"Здоровье монстра: {self.monster_health}/{self.monster_max_health}")
         self.monster_level_label.config(text=f"Уровень: {self.monster_level}")
         self.potion_cost_label.config(text=f"Стоимость зелья: {self.potion_cost} монет")
-        self.power_label.config(text=f"Сила атаки: {self.click_power}")
 
 
 if __name__ == "__main__":
