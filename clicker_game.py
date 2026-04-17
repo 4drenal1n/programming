@@ -129,8 +129,10 @@ class ClickerGame:
             self.spawn_new_monster()
             return
         
-        # Случайный урон монстру (от click_power до click_power * 2)
-        damage_to_monster = random.randint(self.click_power, self.click_power * 2)
+        # Урон по монстру: от 1 до 5 + 2 за уровень монстра
+        base_damage = random.randint(1, 5)
+        level_bonus = 2 * self.monster_level
+        damage_to_monster = base_damage + level_bonus
         self.monster_health -= damage_to_monster
         
         # Случайные монетки (от 1 до 5 + уровень монстра)
