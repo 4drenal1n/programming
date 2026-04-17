@@ -154,7 +154,7 @@ class ClickerGame:
             messagebox.showinfo("Игра окончена", "Вы проиграли! Монстр победил вас.")
             self.reset_game()
         
-        self.update_display()
+        self.display()
     
     def spawn_new_monster(self):
         self.monster_level += 1
@@ -162,7 +162,7 @@ class ClickerGame:
         self.monster_health = self.monster_max_health
         self.click_power += 1  # Увеличиваем силу атаки с каждым уровнем
         self.message_label.config(text=f"Новый монстр {self.monster_level} уровня появился!")
-        self.update_display()
+        self.display()
     
     def buy_potion(self):
         if self.coins >= self.potion_cost:
@@ -175,7 +175,7 @@ class ClickerGame:
             self.player_health = min(self.player_max_health, self.player_health + self.potion_heal)
             healed = self.player_health - old_health
             self.message_label.config(text=f"Вы выпили зелье и восстановили {healed} здоровья!")
-            self.update_display()
+            self.display()
         else:
             messagebox.showinfo("Недостаточно монет", 
                               f"Нужно {self.potion_cost} монет для зелья!")
@@ -189,9 +189,9 @@ class ClickerGame:
         self.player_max_health = 100
         self.player_health = self.player_max_health
         self.message_label.config(text="")
-        self.update_display()
+        self.display()
     
-    def update_display(self):
+    def display(self):
         self.coins_label.config(text=f"Монетки: {self.coins}")
         self.player_health_label.config(text=f"Здоровье игрока: {self.player_health}/{self.player_max_health}")
         self.monster_health_label.config(text=f"Здоровье монстра: {self.monster_health}/{self.monster_max_health}")
