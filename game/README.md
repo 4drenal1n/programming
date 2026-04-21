@@ -12,16 +12,16 @@
 ## Установка и запуск
 
 ### 1. Клонирование репозитория
-``bash
+```bash
 
 git clone <url-репозитория>
 cd <директория-проекта>
-
+```
 ### 2. Создание и активация виртуального окружения
-``bash
+```bash
 
 python -m venv venv
-
+```
 #### Активация виртуального окружения:
 
 Windows: venv\Scripts\activate
@@ -29,5 +29,6 @@ Windows: venv\Scripts\activate
 Linux / macOS: source venv/bin/activate
 
 ### 3. Запуск игры
-``bash
+```bash
 python clicker_game.py
+```
