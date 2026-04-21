@@ -20,7 +20,6 @@ cd <директория-проекта>
 bash
 
 python -m venv venv
-
 ## Активация виртуального окружения:
 
 Windows: venv\Scripts\activate
