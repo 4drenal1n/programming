@@ -23,11 +23,11 @@ cd <директория-проекта>
 python -m venv venv
 ```
 #### Активация виртуального окружения:
-
+```
 Windows: venv\Scripts\activate
 
 Linux / macOS: source venv/bin/activate
-
+```
 ### 3. Запуск игры
 ```bash
 python clicker_game.py
